@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lightcoin</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body background="/static/images/backk.jpg" >
+	<a href="/" style="float: right;"><font size="6">Home</font></a>
+	<h1><font color="pink"> {{item['message']}} #{{item['index']}}</font></h1>
+	<font color="white"><ul>
+		<li><font color="#90EE90" , size="6">Transactions</font></li>
+		<font color="white"><ul> 
+		{% for transaction in item['transactions'] %}
+			{% for key,value in transaction.items() %}
+				<font color="00ffff" size="4"><li> {{key}} : {{value}}</li></font>
+			{% endfor %}
+			<br />
+		{% endfor %}
+		</ul>
+		<li><font color="#90EE90" , size="6">Proof: {{item['proof']}}</font></li>
+	</ul>
+	<a href="mine"><font size="6">Mine again</font></a0>
+</body>
+</html>

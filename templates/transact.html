@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lightcoin</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body background="/static/images/backk.jpg">
+	<a href="/" style="float: right;"><font size="6">Home</font></a><br><br><br><br>
+	<center><h1><font color="pink">Create New Transaction</font></h1></center>
+	<center><form action="transactions/new" method="POST">
+		<input size="35" type="text" name="recipient" id="recipient" placeholder="Enter recipient" required="required" /><br /><br>
+		<input type="number" name="amount" id="amount" placeholder="Enter amount" required="required" /><br /><br>
+		<input type="submit" value="Send"></input>
+	</form></center>
+</body>
+</html>
